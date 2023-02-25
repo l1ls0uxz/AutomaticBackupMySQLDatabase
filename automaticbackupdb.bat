@@ -16,6 +16,7 @@ MAKECAB "databases.%TIMESTAMP%.sql" "databases.%TIMESTAMP%.sql.cab"
 REM Delete uncompressed DB dump file.
 DEL /q /f "databases.%TIMESTAMP%.sql"
 
+:: comment
 :: -h for host
 :: -p for password
 :: -P for Port
