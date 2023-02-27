@@ -14,5 +14,3 @@ set SUBFILENAME=%CUR_DD%-%CUR_MM%-%CUR_YYYY%_%CUR_HH%-%CUR_NN%-%CUR_SS%
 
 REM Export all databases into file C:\path\backup\databases.[year][month][day][hour][minutes][seconds].sql
 start "" "C:\Program Files\MySQL\MySQL Server 5.6\bin\mysqldump.exe" -uroot -p0546 -h127.0.0.1 -P3306 newdatabase --result-file="D:\backup\AutoBackupTask\newdatabase.%SUBFILENAME%.sql"
-:: using forfiles to del old file afterr X days.
-FORFILES /p "D:\backup" /s /m *.sql /D -1 /C "cmd /c del @file"
