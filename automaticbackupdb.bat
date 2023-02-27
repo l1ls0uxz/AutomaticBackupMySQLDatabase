@@ -1,8 +1,8 @@
 @echo off
 
-set TIMESTAMP=%DATE:~10,4%-%DATE:~7,2%-%DATE:~4,2%
+set TIMESTAMP=%DATE:~10,4%-%DATE:~7,2%-%DATE:~4,2%_%TIME:~0,2%-%TIME:~3,2%-%TIME:~6,2%
 
-REM Export all databases into file C:\path\backup\databases.[year][month][day].sql
+REM Export all databases into file C:\path\backup\databases.[year][month][day][hour][minutes][seconds].sql
 start "" "C:\Program Files\MySQL\MySQL Server 5.6\bin\mysqldump.exe" -uroot -p0546 -h127.0.0.1 -P3306 newdatabase --result-file="D:\backup\AutoBackupTask\newdatabase.%TIMESTAMP%.sql"
 
 
